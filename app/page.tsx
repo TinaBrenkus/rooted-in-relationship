@@ -400,8 +400,7 @@ export default function HomePage() {
                         />
                         <div className="p-3 rounded-lg border-2 text-center cursor-pointer transition hover:border-opacity-50"
                           style={{ 
-                            borderColor: '#9b9b84',
-                            borderOpacity: 0.3,
+                            borderColor: 'rgba(155, 155, 132, 0.3)',
                             color: '#656d4f'
                           }}>
                           {role}
