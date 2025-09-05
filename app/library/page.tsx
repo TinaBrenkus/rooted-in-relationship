@@ -40,9 +40,11 @@ export default function ResourceLibraryPage() {
 
   // Check if user already has access
   useState(() => {
-    const access = localStorage.getItem('libraryAccess');
-    if (access === 'true') {
-      setHasAccess(true);
+    if (typeof window !== 'undefined') {
+      const access = localStorage.getItem('libraryAccess');
+      if (access === 'true') {
+        setHasAccess(true);
+      }
     }
   });
 
