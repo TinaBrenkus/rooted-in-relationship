@@ -48,7 +48,7 @@ export default function HomePage() {
               <Link href="/case-study" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Case Study</Link>
               <a href="#parents" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>For Parents</a>
               <a href="#teachers" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>For Teachers</a>
-              <Link href="/resources" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Resources</Link>
+              <Link href="/library" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Resource Library</Link>
               <a href="#contact" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Contact</a>
             </div>
             
@@ -84,7 +84,7 @@ export default function HomePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Link href="/resources">
+                <Link href="/library">
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -94,7 +94,7 @@ export default function HomePage() {
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#656d4f'}
                   >
                     <BookOpen className="w-5 h-5" />
-                    <span>Get Free Resources</span>
+                    <span>Access Resource Library</span>
                     <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </Link>
@@ -240,7 +240,7 @@ export default function HomePage() {
                 ))}
               </ul>
               
-              <Link href="/resources">
+              <Link href="/library">
                 <button className="text-white px-6 py-3 rounded-full transition-colors font-medium flex items-center space-x-2" style={{ backgroundColor: '#b97d83' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#b97d83'}>
                   <span>Parent Resources</span>
                   <ArrowRight className="w-4 h-4" />
@@ -285,7 +285,7 @@ export default function HomePage() {
                 ))}
               </ul>
               
-              <Link href="/resources">
+              <Link href="/library">
                 <button className="text-white px-6 py-3 rounded-full transition-colors font-medium flex items-center space-x-2" style={{ backgroundColor: '#9b9b84' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#656d4f'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}>
                   <span>Educator Resources</span>
                   <ArrowRight className="w-4 h-4" />
@@ -455,7 +455,7 @@ export default function HomePage() {
                     Get My Custom Resources
                   </motion.button>
                   
-                  <Link href="/resources">
+                  <Link href="/custom-support">
                     <motion.button
                       type="button"
                       whileHover={{ scale: 1.05 }}
@@ -503,7 +503,7 @@ export default function HomePage() {
                 <li><a href="#about" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>About</a></li>
                 <li><a href="#parents" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>For Parents</a></li>
                 <li><a href="#teachers" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>For Teachers</a></li>
-                <li><a href="#resources" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>Resources</a></li>
+                <li><Link href="/library" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>Resource Library</Link></li>
               </ul>
             </div>
             
