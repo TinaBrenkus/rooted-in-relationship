@@ -20,6 +20,7 @@ import {
 export default function HomePage() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,14 +53,45 @@ export default function HomePage() {
               <a href="#contact" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Contact</a>
             </div>
             
-            <button className="md:hidden p-2">
+            <button 
+              className="md:hidden p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
               <div className="space-y-1">
-                <div className="w-6 h-0.5" style={{ backgroundColor: '#656d4f' }}></div>
-                <div className="w-6 h-0.5" style={{ backgroundColor: '#656d4f' }}></div>
-                <div className="w-6 h-0.5" style={{ backgroundColor: '#656d4f' }}></div>
+                <div className="w-6 h-0.5 transition-all" style={{ 
+                  backgroundColor: '#656d4f',
+                  transform: mobileMenuOpen ? 'rotate(45deg) translateY(6px)' : 'none'
+                }}></div>
+                <div className="w-6 h-0.5 transition-all" style={{ 
+                  backgroundColor: '#656d4f',
+                  opacity: mobileMenuOpen ? 0 : 1
+                }}></div>
+                <div className="w-6 h-0.5 transition-all" style={{ 
+                  backgroundColor: '#656d4f',
+                  transform: mobileMenuOpen ? 'rotate(-45deg) translateY(-6px)' : 'none'
+                }}></div>
               </div>
             </button>
           </div>
+          
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="md:hidden"
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3" style={{ backgroundColor: 'rgba(251, 237, 219, 0.98)' }}>
+                <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+                <Link href="/case-study" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>Case Study</Link>
+                <a href="#parents" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>For Parents</a>
+                <a href="#teachers" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>For Teachers</a>
+                <Link href="/library" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>Resource Library</Link>
+                <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>Contact</a>
+              </div>
+            </motion.div>
+          )}
         </div>
       </nav>
 
