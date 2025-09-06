@@ -124,11 +124,12 @@ export default function ResourceLibraryPage() {
             
             <Link 
               href="/"
-              className="flex items-center space-x-2 transition hover:opacity-70" 
+              className="flex items-center space-x-2 transition hover:opacity-70 text-sm sm:text-base" 
               style={{ color: '#656d4f' }}
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Back to Home</span>
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Back</span>
             </Link>
           </div>
         </div>
