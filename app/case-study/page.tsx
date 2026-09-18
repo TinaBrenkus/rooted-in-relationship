@@ -30,7 +30,7 @@ export default function CaseStudyPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-3">
               <HandDrawnTree size={40} />
-              <span className="text-xl font-semibold font-crimson" style={{ color: '#656d4f' }}>
+              <span className="text-xl font-semibold font-crimson" style={{ color: '#4a6b2a' }}>
                 Rooted In Relationship
               </span>
             </Link>
@@ -38,7 +38,7 @@ export default function CaseStudyPage() {
             <Link 
               href="/"
               className="flex items-center space-x-2 transition hover:opacity-70" 
-              style={{ color: '#656d4f' }}
+              style={{ color: '#4a6b2a' }}
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Home</span>
@@ -56,35 +56,35 @@ export default function CaseStudyPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}>
-              <FileText className="w-6 h-6" style={{ color: '#656d4f' }} />
-              <span className="font-medium" style={{ color: '#656d4f' }}>Case Study</span>
+            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}>
+              <FileText className="w-6 h-6" style={{ color: '#4a6b2a' }} />
+              <span className="font-medium" style={{ color: '#4a6b2a' }}>Case Study</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 font-crimson leading-tight" style={{ color: '#656d4f' }}>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 font-crimson leading-tight" style={{ color: '#4a6b2a' }}>
               From Meltdowns to Cooperation: 
-              <span className="block mt-2" style={{ color: '#9b9b84' }}>
+              <span className="block mt-2" style={{ color: '#7a9152' }}>
                 How 4-Year-Old Sarah Learned New Ways to Communicate
               </span>
             </h1>
             
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#9b9b84' }}>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#7a9152' }}>
               A real story of transformation using relationship-based strategies and collaborative problem-solving
             </p>
             
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8 max-w-2xl mx-auto">
               <div className="p-4 rounded-lg organic-card">
-                <p className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>4 weeks</p>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>to see change</p>
+                <p className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>6-8 weeks</p>
+                <p className="text-sm" style={{ color: '#7a9152' }}>to see change</p>
               </div>
               <div className="p-4 rounded-lg organic-card">
-                <p className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>80%</p>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>fewer meltdowns</p>
+                <p className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>80%</p>
+                <p className="text-sm" style={{ color: '#7a9152' }}>fewer meltdowns</p>
               </div>
               <div className="p-4 rounded-lg organic-card">
-                <p className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>3 tools</p>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>implemented</p>
+                <p className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>3 tools</p>
+                <p className="text-sm" style={{ color: '#7a9152' }}>implemented</p>
               </div>
             </div>
           </motion.div>
@@ -103,14 +103,14 @@ export default function CaseStudyPage() {
           >
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201, 168, 141, 0.2)' }}>
-                <Heart className="w-6 h-6" style={{ color: '#b97d83' }} />
+                <Heart className="w-6 h-6" style={{ color: '#9c6a42' }} />
               </div>
-              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                 The Challenge
               </h2>
             </div>
             
-            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#7a9152' }}>
               Sarah, a bright and creative 4-year-old, was experiencing daily meltdowns that were affecting 
               her entire family. Every transition—from playtime to meals, from home to preschool, 
               from bath to bed—ended in tears, screaming, and sometimes aggression.
@@ -118,37 +118,37 @@ export default function CaseStudyPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <h3 className="font-semibold mb-3" style={{ color: '#656d4f' }}>What Mom Shared:</h3>
+                <h3 className="font-semibold mb-3" style={{ color: '#4a6b2a' }}>What Mom Shared:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>"Getting dressed takes an hour every morning"</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>"Getting dressed takes an hour every morning"</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>"She hits her little brother when frustrated"</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>"She hits her little brother when frustrated"</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>"Leaving the park always ends in a meltdown"</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>"Leaving the park always ends in a meltdown"</span>
                   </li>
                 </ul>
               </div>
               
               <div className="p-4 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <h3 className="font-semibold mb-3" style={{ color: '#656d4f' }}>What Teacher Noticed:</h3>
+                <h3 className="font-semibold mb-3" style={{ color: '#4a6b2a' }}>What Teacher Noticed:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Difficulty moving between activities</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Difficulty moving between activities</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Became upset when plans changed</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Became upset when plans changed</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Needed lots of warnings before transitions</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Needed lots of warnings before transitions</span>
                   </li>
                 </ul>
               </div>
@@ -168,15 +168,15 @@ export default function CaseStudyPage() {
             className="organic-card p-8 rounded-2xl organic-shadow"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(155, 155, 132, 0.2)' }}>
-                <Search className="w-6 h-6" style={{ color: '#9b9b84' }} />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(122, 145, 82, 0.2)' }}>
+                <Search className="w-6 h-6" style={{ color: '#7a9152' }} />
               </div>
-              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                 The Investigation: What Was Getting in the Way?
               </h2>
             </div>
             
-            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#7a9152' }}>
               Instead of focusing on the behavior, we looked deeper to understand what skills Sarah was missing 
               and what was making transitions so difficult for her.
             </p>
@@ -189,10 +189,10 @@ export default function CaseStudyPage() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <Lightbulb className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#b97d83' }} />
+                <Lightbulb className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#9c6a42' }} />
                 <div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Discovery 1: Time Blindness</h3>
-                  <p style={{ color: '#9b9b84' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Discovery 1: Time Blindness</h3>
+                  <p style={{ color: '#7a9152' }}>
                     Sarah couldn't "feel" time passing. Five minutes and fifty minutes felt the same to her, 
                     making transitions feel sudden and unexpected.
                   </p>
@@ -206,10 +206,10 @@ export default function CaseStudyPage() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <Lightbulb className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#b97d83' }} />
+                <Lightbulb className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#9c6a42' }} />
                 <div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Discovery 2: Difficulty with Flexibility</h3>
-                  <p style={{ color: '#9b9b84' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Discovery 2: Difficulty with Flexibility</h3>
+                  <p style={{ color: '#7a9152' }}>
                     Once Sarah had a plan in her mind, shifting to something else felt overwhelming. 
                     Her brain needed more time to adjust to changes.
                   </p>
@@ -223,10 +223,10 @@ export default function CaseStudyPage() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <Lightbulb className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#b97d83' }} />
+                <Lightbulb className="w-8 h-8 flex-shrink-0 mt-1" style={{ color: '#9c6a42' }} />
                 <div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Discovery 3: Big Feelings, Few Words</h3>
-                  <p style={{ color: '#9b9b84' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Discovery 3: Big Feelings, Few Words</h3>
+                  <p style={{ color: '#7a9152' }}>
                     Sarah experienced emotions intensely but didn't have the words to express her disappointment, 
                     frustration, or need for control.
                   </p>
@@ -235,7 +235,7 @@ export default function CaseStudyPage() {
             </div>
             
             <div className="mt-8 p-4 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-              <p className="italic text-center" style={{ color: '#656d4f' }}>
+              <p className="italic text-center" style={{ color: '#4a6b2a' }}>
                 "Once we understood what was hard for Sarah, we could teach the skills she was missing."
               </p>
             </div>
@@ -254,15 +254,15 @@ export default function CaseStudyPage() {
             className="organic-card p-8 rounded-2xl organic-shadow"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(155, 155, 132, 0.2)' }}>
-                <Target className="w-6 h-6" style={{ color: '#9b9b84' }} />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(122, 145, 82, 0.2)' }}>
+                <Target className="w-6 h-6" style={{ color: '#7a9152' }} />
               </div>
-              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                 The Strategy: Building Skills Together
               </h2>
             </div>
             
-            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#7a9152' }}>
               We created a plan that focused on teaching Sarah new skills while supporting her through transitions. 
               Every strategy was practiced when she was calm, not during meltdowns.
             </p>
@@ -276,10 +276,10 @@ export default function CaseStudyPage() {
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(201, 168, 141, 0.2)' }}>
-                  <span className="text-2xl font-bold" style={{ color: '#b97d83' }}>1</span>
+                  <span className="text-2xl font-bold" style={{ color: '#9c6a42' }}>1</span>
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Visual Schedule</h3>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>
+                <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Visual Schedule</h3>
+                <p className="text-sm" style={{ color: '#7a9152' }}>
                   Created a picture schedule showing the day's activities, giving Sarah predictability and control
                 </p>
               </motion.div>
@@ -292,10 +292,10 @@ export default function CaseStudyPage() {
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(201, 168, 141, 0.2)' }}>
-                  <span className="text-2xl font-bold" style={{ color: '#b97d83' }}>2</span>
+                  <span className="text-2xl font-bold" style={{ color: '#9c6a42' }}>2</span>
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Transition Warnings</h3>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>
+                <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Transition Warnings</h3>
+                <p className="text-sm" style={{ color: '#7a9152' }}>
                   Used a timer and "first/then" language: "First we finish playing, then we have snack"
                 </p>
               </motion.div>
@@ -308,10 +308,10 @@ export default function CaseStudyPage() {
                 className="text-center"
               >
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(201, 168, 141, 0.2)' }}>
-                  <span className="text-2xl font-bold" style={{ color: '#b97d83' }}>3</span>
+                  <span className="text-2xl font-bold" style={{ color: '#9c6a42' }}>3</span>
                 </div>
-                <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Feeling Words</h3>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>
+                <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Feeling Words</h3>
+                <p className="text-sm" style={{ color: '#7a9152' }}>
                   Taught emotion vocabulary and practiced saying "I'm disappointed" instead of melting down
                 </p>
               </motion.div>
@@ -319,23 +319,23 @@ export default function CaseStudyPage() {
             
             {/* Implementation Steps */}
             <div className="mt-8 p-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-              <h3 className="font-semibold mb-4" style={{ color: '#656d4f' }}>Week-by-Week Implementation:</h3>
+              <h3 className="font-semibold mb-4" style={{ color: '#4a6b2a' }}>Week-by-Week Implementation:</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5" style={{ color: '#9b9b84' }} />
-                  <span style={{ color: '#656d4f' }}><strong>Week 1:</strong> Introduced visual schedule, practiced during calm moments</span>
+                  <Clock className="w-5 h-5" style={{ color: '#7a9152' }} />
+                  <span style={{ color: '#4a6b2a' }}><strong>Week 1:</strong> Introduced visual schedule, practiced during calm moments</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5" style={{ color: '#9b9b84' }} />
-                  <span style={{ color: '#656d4f' }}><strong>Week 2:</strong> Added timer warnings, celebrated small successes</span>
+                  <Clock className="w-5 h-5" style={{ color: '#7a9152' }} />
+                  <span style={{ color: '#4a6b2a' }}><strong>Week 2:</strong> Added timer warnings, celebrated small successes</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5" style={{ color: '#9b9b84' }} />
-                  <span style={{ color: '#656d4f' }}><strong>Week 3:</strong> Taught feeling words through books and role-play</span>
+                  <Clock className="w-5 h-5" style={{ color: '#7a9152' }} />
+                  <span style={{ color: '#4a6b2a' }}><strong>Week 3:</strong> Taught feeling words through books and role-play</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5" style={{ color: '#9b9b84' }} />
-                  <span style={{ color: '#656d4f' }}><strong>Week 4:</strong> Combined all strategies, adjusted based on what worked</span>
+                  <Clock className="w-5 h-5" style={{ color: '#7a9152' }} />
+                  <span style={{ color: '#4a6b2a' }}><strong>Week 4:</strong> Combined all strategies, adjusted based on what worked</span>
                 </div>
               </div>
             </div>
@@ -354,70 +354,70 @@ export default function CaseStudyPage() {
             className="organic-card p-8 rounded-2xl organic-shadow"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(155, 155, 132, 0.2)' }}>
-                <TrendingUp className="w-6 h-6" style={{ color: '#9b9b84' }} />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(122, 145, 82, 0.2)' }}>
+                <TrendingUp className="w-6 h-6" style={{ color: '#7a9152' }} />
               </div>
-              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                 The Results: Real Change in 4 Weeks
               </h2>
             </div>
             
-            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-lg mb-6 leading-relaxed" style={{ color: '#7a9152' }}>
               By focusing on skill-building rather than punishment, Sarah's family saw dramatic improvements 
               that have lasted.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <h3 className="font-semibold mb-4 flex items-center space-x-2" style={{ color: '#656d4f' }}>
-                  <CheckCircle className="w-5 h-5" style={{ color: '#9b9b84' }} />
+                <h3 className="font-semibold mb-4 flex items-center space-x-2" style={{ color: '#4a6b2a' }}>
+                  <CheckCircle className="w-5 h-5" style={{ color: '#7a9152' }} />
                   <span>Immediate Changes (Week 1-2)</span>
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Sarah started checking her schedule independently</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Sarah started checking her schedule independently</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Meltdowns decreased from 5-6 daily to 2-3</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Meltdowns decreased from 5-6 daily to 2-3</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Morning routine improved dramatically</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Morning routine improved dramatically</span>
                   </li>
                 </ul>
               </div>
               
               <div className="p-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <h3 className="font-semibold mb-4 flex items-center space-x-2" style={{ color: '#656d4f' }}>
-                  <CheckCircle className="w-5 h-5" style={{ color: '#9b9b84' }} />
+                <h3 className="font-semibold mb-4 flex items-center space-x-2" style={{ color: '#4a6b2a' }}>
+                  <CheckCircle className="w-5 h-5" style={{ color: '#7a9152' }} />
                   <span>Long-term Success (Week 3-4)</span>
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>80% reduction in daily meltdowns</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>80% reduction in daily meltdowns</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Sarah could express feelings with words</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Sarah could express feelings with words</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#b97d83' }}></div>
-                    <span style={{ color: '#656d4f' }}>Family outings became enjoyable again</span>
+                    <div className="w-2 h-2 rounded-full mt-2" style={{ backgroundColor: '#9c6a42' }}></div>
+                    <span style={{ color: '#4a6b2a' }}>Family outings became enjoyable again</span>
                   </li>
                 </ul>
               </div>
             </div>
             
-            <div className="mt-8 p-6 rounded-lg text-center" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}>
-              <Quote className="w-8 h-8 mx-auto mb-4" style={{ color: '#b97d83' }} />
-              <p className="text-lg italic mb-4" style={{ color: '#656d4f' }}>
+            <div className="mt-8 p-6 rounded-lg text-center" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}>
+              <Quote className="w-8 h-8 mx-auto mb-4" style={{ color: '#9c6a42' }} />
+              <p className="text-lg italic mb-4" style={{ color: '#4a6b2a' }}>
                 "I have my daughter back. She's still strong-willed and spirited, but now she has tools 
                 to handle her big feelings. Our whole family is happier."
               </p>
-              <p className="font-semibold" style={{ color: '#9b9b84' }}>— Sarah's Mom</p>
+              <p className="font-semibold" style={{ color: '#7a9152' }}>— Sarah's Mom</p>
             </div>
           </motion.div>
         </div>
@@ -434,35 +434,35 @@ export default function CaseStudyPage() {
             className="organic-card p-8 rounded-2xl organic-shadow"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(155, 155, 132, 0.2)' }}>
-                <FileText className="w-6 h-6" style={{ color: '#9b9b84' }} />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(122, 145, 82, 0.2)' }}>
+                <FileText className="w-6 h-6" style={{ color: '#7a9152' }} />
               </div>
-              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+              <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                 Tools That Made the Difference
               </h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <Calendar className="w-12 h-12 mx-auto mb-4" style={{ color: '#b97d83' }} />
-                <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Visual Schedule</h3>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>
+                <Calendar className="w-12 h-12 mx-auto mb-4" style={{ color: '#9c6a42' }} />
+                <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Visual Schedule</h3>
+                <p className="text-sm" style={{ color: '#7a9152' }}>
                   Picture cards showing daily activities in order, allowing Sarah to see what comes next
                 </p>
               </div>
               
               <div className="text-center p-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <MessageSquare className="w-12 h-12 mx-auto mb-4" style={{ color: '#b97d83' }} />
-                <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Communication Scripts</h3>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>
+                <MessageSquare className="w-12 h-12 mx-auto mb-4" style={{ color: '#9c6a42' }} />
+                <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Communication Scripts</h3>
+                <p className="text-sm" style={{ color: '#7a9152' }}>
                   Simple phrases for parents and teachers to use consistently during transitions
                 </p>
               </div>
               
               <div className="text-center p-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <Heart className="w-12 h-12 mx-auto mb-4" style={{ color: '#b97d83' }} />
-                <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Calming Strategies</h3>
-                <p className="text-sm" style={{ color: '#9b9b84' }}>
+                <Heart className="w-12 h-12 mx-auto mb-4" style={{ color: '#9c6a42' }} />
+                <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Calming Strategies</h3>
+                <p className="text-sm" style={{ color: '#7a9152' }}>
                   Deep breathing, counting, and a special calm-down space with sensory tools
                 </p>
               </div>
@@ -484,11 +484,11 @@ export default function CaseStudyPage() {
           >
             <HandDrawnTree size={60} className="mx-auto mb-6 opacity-50" />
             
-            <h2 className="text-3xl font-bold mb-6 font-crimson" style={{ color: '#656d4f' }}>
+            <h2 className="text-3xl font-bold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
               Every Child's Story is Different
             </h2>
             
-            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: '#9b9b84' }}>
+            <p className="text-xl mb-8 max-w-2xl mx-auto" style={{ color: '#7a9152' }}>
               Sarah's success came from understanding her unique needs and building a plan specifically for her. 
               Your child deserves the same individualized approach.
             </p>
@@ -498,18 +498,14 @@ export default function CaseStudyPage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 rounded-full text-white text-lg font-medium transition organic-shadow inline-flex items-center space-x-2"
-                style={{ backgroundColor: '#656d4f' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#656d4f'}
+                style={{ backgroundColor: '#4a6b2a' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
               >
-                <span>Request Your Own Behavior Support Plan</span>
+                <span>Request Your Own Personalized Strategies</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
             </Link>
-            
-            <p className="mt-6 text-sm" style={{ color: '#9b9b84' }}>
-              Free consultation • Evidence-based strategies • Ongoing support
-            </p>
           </motion.div>
         </div>
       </section>

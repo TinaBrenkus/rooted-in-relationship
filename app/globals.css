@@ -2,14 +2,14 @@
 
 :root {
   --background: #fbeddb;
-  --foreground: #656d4f;
+  --foreground: #4a6b2a;
   
   /* Organic color palette */
-  --sage-dark: #656d4f;
-  --sage-light: #9b9b84;
+  --sage-dark: #4a6b2a;
+  --sage-light: #7a9152;
   --cream: #fbeddb;
   --beige: #e1d0bc;
-  --brown: #b97d83;
+  --brown: #9c6a42;
 }
 
 .font-crimson {
@@ -22,12 +22,12 @@
 
 .organic-card {
   background: linear-gradient(135deg, #fbeddb 0%, #f5e8d3 100%);
-  border: 1px solid rgba(101, 109, 79, 0.1);
-  box-shadow: 0 4px 20px rgba(101, 109, 79, 0.08);
+  border: 1px solid rgba(74, 107, 42, 0.1);
+  box-shadow: 0 4px 20px rgba(74, 107, 42, 0.08);
 }
 
 .organic-shadow {
-  box-shadow: 0 8px 25px rgba(101, 109, 79, 0.12);
+  box-shadow: 0 8px 25px rgba(74, 107, 42, 0.12);
 }
 
 body {

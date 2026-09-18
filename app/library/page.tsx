@@ -117,7 +117,7 @@ export default function ResourceLibraryPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-3">
               <HandDrawnTree size={40} />
-              <span className="text-xl font-semibold font-crimson" style={{ color: '#656d4f' }}>
+              <span className="text-xl font-semibold font-crimson" style={{ color: '#4a6b2a' }}>
                 Rooted In Relationship
               </span>
             </Link>
@@ -125,7 +125,7 @@ export default function ResourceLibraryPage() {
             <Link 
               href="/"
               className="flex items-center space-x-2 transition hover:opacity-70 text-sm sm:text-base" 
-              style={{ color: '#656d4f' }}
+              style={{ color: '#4a6b2a' }}
             >
               <ArrowLeft className="w-4 h-4" />
               <span className="hidden sm:inline">Back to Home</span>
@@ -144,16 +144,16 @@ export default function ResourceLibraryPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}>
-              <BookOpen className="w-6 h-6" style={{ color: '#656d4f' }} />
-              <span className="font-medium" style={{ color: '#656d4f' }}>Free Resources</span>
+            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}>
+              <BookOpen className="w-6 h-6" style={{ color: '#4a6b2a' }} />
+              <span className="font-medium" style={{ color: '#4a6b2a' }}>Free Resources</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6 font-crimson" style={{ color: '#656d4f' }}>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
               Resource Library
             </h1>
             
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#7a9152' }}>
               Evidence-based tools, worksheets, and guides to support children with challenging behaviors. 
               Created by an ECSE specialist, used by parents and teachers everywhere.
             </p>
@@ -171,13 +171,13 @@ export default function ResourceLibraryPage() {
               transition={{ duration: 0.8 }}
               className="organic-card p-12 rounded-2xl organic-shadow text-center"
             >
-              <Lock className="w-16 h-16 mx-auto mb-6" style={{ color: '#b97d83' }} />
+              <Lock className="w-16 h-16 mx-auto mb-6" style={{ color: '#9c6a42' }} />
               
-              <h2 className="text-3xl font-bold mb-4 font-crimson" style={{ color: '#656d4f' }}>
+              <h2 className="text-3xl font-bold mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
                 Get Instant Access to the Library
               </h2>
               
-              <p className="text-lg mb-8" style={{ color: '#9b9b84' }}>
+              <p className="text-lg mb-8" style={{ color: '#7a9152' }}>
                 Join thousands of parents and teachers who use these resources to support their children. 
                 Enter your email to unlock immediate access to all materials.
               </p>
@@ -196,7 +196,7 @@ export default function ResourceLibraryPage() {
                       borderStyle: 'solid',
                       borderColor: '#e1d0bc',
                       backgroundColor: '#fbeddb',
-                      color: '#656d4f'
+                      color: '#4a6b2a'
                     }}
                   />
                   
@@ -207,7 +207,7 @@ export default function ResourceLibraryPage() {
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 rounded-full text-white font-medium transition organic-shadow text-lg"
                     style={{ 
-                      backgroundColor: isSubmitting ? '#9b9b84' : '#656d4f',
+                      backgroundColor: isSubmitting ? '#7a9152' : '#4a6b2a',
                       minWidth: '180px'
                     }}
                   >
@@ -217,28 +217,28 @@ export default function ResourceLibraryPage() {
               </form>
               
               <div className="mt-8 p-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                <p className="text-sm mb-4" style={{ color: '#656d4f' }}>
+                <p className="text-sm mb-4" style={{ color: '#4a6b2a' }}>
                   <strong>What you'll get instant access to:</strong>
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm" style={{ color: '#9b9b84' }}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm" style={{ color: '#7a9152' }}>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4" style={{ color: '#b97d83' }} />
+                    <CheckCircle className="w-4 h-4" style={{ color: '#9c6a42' }} />
                     <span>Visual schedules & routines</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4" style={{ color: '#b97d83' }} />
+                    <CheckCircle className="w-4 h-4" style={{ color: '#9c6a42' }} />
                     <span>Behavior tracking forms</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4" style={{ color: '#b97d83' }} />
+                    <CheckCircle className="w-4 h-4" style={{ color: '#9c6a42' }} />
                     <span>Calm down strategies</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4" style={{ color: '#b97d83' }} />
+                    <CheckCircle className="w-4 h-4" style={{ color: '#9c6a42' }} />
                     <span>Communication scripts</span>
                   </div>
                 </div>
-                <p className="text-xs mt-4" style={{ color: '#9b9b84' }}>
+                <p className="text-xs mt-4" style={{ color: '#7a9152' }}>
                   We respect your privacy. Unsubscribe anytime.
                 </p>
               </div>
@@ -255,7 +255,7 @@ export default function ResourceLibraryPage() {
             className="py-6 text-center"
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full" 
-                 style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)', color: '#656d4f' }}>
+                 style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)', color: '#4a6b2a' }}>
               <CheckCircle className="w-5 h-5" />
               <span>You have full access to the library!</span>
             </div>
@@ -272,9 +272,9 @@ export default function ResourceLibraryPage() {
                 <div className="flex items-center space-x-3 mb-8">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center" 
                        style={{ backgroundColor: 'rgba(201, 168, 141, 0.2)' }}>
-                    <Users className="w-6 h-6" style={{ color: '#b97d83' }} />
+                    <Users className="w-6 h-6" style={{ color: '#9c6a42' }} />
                   </div>
-                  <h2 className="text-3xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+                  <h2 className="text-3xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                     For Parents
                   </h2>
                 </div>
@@ -295,19 +295,19 @@ export default function ResourceLibraryPage() {
                             {resource.icon}
                           </div>
                           <span className="text-sm font-medium px-3 py-1 rounded-full" 
-                                style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)', color: '#9b9b84' }}>
+                                style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)', color: '#7a9152' }}>
                             {resource.type}
                           </span>
                         </div>
                         <Download className="w-5 h-5 opacity-50 group-hover:opacity-100 transition" 
-                                  style={{ color: '#656d4f' }} />
+                                  style={{ color: '#4a6b2a' }} />
                       </div>
                       
-                      <h3 className="text-xl font-semibold mb-2 font-crimson" style={{ color: '#656d4f' }}>
+                      <h3 className="text-xl font-semibold mb-2 font-crimson" style={{ color: '#4a6b2a' }}>
                         {resource.title}
                       </h3>
                       
-                      <p className="text-sm" style={{ color: '#9b9b84' }}>
+                      <p className="text-sm" style={{ color: '#7a9152' }}>
                         {resource.description}
                       </p>
                     </motion.div>
@@ -327,10 +327,10 @@ export default function ResourceLibraryPage() {
               >
                 <div className="flex items-center space-x-3 mb-8">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center" 
-                       style={{ backgroundColor: 'rgba(155, 155, 132, 0.2)' }}>
-                    <GraduationCap className="w-6 h-6" style={{ color: '#9b9b84' }} />
+                       style={{ backgroundColor: 'rgba(122, 145, 82, 0.2)' }}>
+                    <GraduationCap className="w-6 h-6" style={{ color: '#7a9152' }} />
                   </div>
-                  <h2 className="text-3xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+                  <h2 className="text-3xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                     For Teachers
                   </h2>
                 </div>
@@ -350,19 +350,19 @@ export default function ResourceLibraryPage() {
                           {resource.icon}
                         </div>
                         <Download className="w-5 h-5 opacity-50 group-hover:opacity-100 transition" 
-                                  style={{ color: '#656d4f' }} />
+                                  style={{ color: '#4a6b2a' }} />
                       </div>
                       
                       <span className="text-xs font-medium px-2 py-1 rounded-full" 
-                            style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)', color: '#9b9b84' }}>
+                            style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)', color: '#7a9152' }}>
                         {resource.type}
                       </span>
                       
-                      <h3 className="text-lg font-semibold mt-3 mb-2 font-crimson" style={{ color: '#656d4f' }}>
+                      <h3 className="text-lg font-semibold mt-3 mb-2 font-crimson" style={{ color: '#4a6b2a' }}>
                         {resource.title}
                       </h3>
                       
-                      <p className="text-sm" style={{ color: '#9b9b84' }}>
+                      <p className="text-sm" style={{ color: '#7a9152' }}>
                         {resource.description}
                       </p>
                     </motion.div>
@@ -382,11 +382,11 @@ export default function ResourceLibraryPage() {
                 className="text-center p-8 rounded-2xl"
                 style={{ backgroundColor: 'rgba(225, 208, 188, 0.2)' }}
               >
-                <BookOpen className="w-12 h-12 mx-auto mb-4" style={{ color: '#b97d83' }} />
-                <h3 className="text-2xl font-bold mb-4 font-crimson" style={{ color: '#656d4f' }}>
+                <BookOpen className="w-12 h-12 mx-auto mb-4" style={{ color: '#9c6a42' }} />
+                <h3 className="text-2xl font-bold mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
                   This Library is Growing!
                 </h3>
-                <p className="text-lg mb-6" style={{ color: '#9b9b84' }}>
+                <p className="text-lg mb-6" style={{ color: '#7a9152' }}>
                   New resources are added every week based on what families and educators need most.
                 </p>
                 <Link href="/custom-support">
@@ -396,8 +396,8 @@ export default function ResourceLibraryPage() {
                     className="px-6 py-3 rounded-full font-medium transition"
                     style={{ 
                       backgroundColor: 'transparent',
-                      color: '#656d4f',
-                      border: '2px solid #656d4f'
+                      color: '#4a6b2a',
+                      border: '2px solid #4a6b2a'
                     }}
                   >
                     Need Something Specific? Get Custom Support →

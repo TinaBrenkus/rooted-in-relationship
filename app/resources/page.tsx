@@ -48,7 +48,7 @@ export default function RequestResourcesPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-3">
               <HandDrawnTree size={40} />
-              <span className="text-xl font-semibold font-crimson" style={{ color: '#656d4f' }}>
+              <span className="text-xl font-semibold font-crimson" style={{ color: '#4a6b2a' }}>
                 Rooted In Relationship
               </span>
             </Link>
@@ -56,7 +56,7 @@ export default function RequestResourcesPage() {
             <Link 
               href="/"
               className="flex items-center space-x-2 transition hover:opacity-70" 
-              style={{ color: '#656d4f' }}
+              style={{ color: '#4a6b2a' }}
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Home</span>
@@ -76,16 +76,16 @@ export default function RequestResourcesPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}>
-              <BookOpen className="w-6 h-6" style={{ color: '#656d4f' }} />
-              <span className="font-medium" style={{ color: '#656d4f' }}>Request Resources</span>
+            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}>
+              <BookOpen className="w-6 h-6" style={{ color: '#4a6b2a' }} />
+              <span className="font-medium" style={{ color: '#4a6b2a' }}>Request Resources</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6 font-crimson" style={{ color: '#656d4f' }}>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
               What challenges are you facing?
             </h1>
             
-            <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: '#7a9152' }}>
               I build resources based on real needs from real families and educators. 
               Tell me what would help you most, and I'll create something just for you.
             </p>
@@ -102,7 +102,7 @@ export default function RequestResourcesPage() {
               
               {/* Role Selection */}
               <div>
-                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#656d4f' }}>
+                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
                   <User className="w-5 h-5" />
                   <span>Your Role</span>
                 </label>
@@ -123,9 +123,9 @@ export default function RequestResourcesPage() {
                           : 'border-opacity-30 hover:border-opacity-50'
                       }`}
                       style={{ 
-                        borderColor: '#9b9b84',
-                        backgroundColor: formData.role === role ? '#9b9b84' : 'transparent',
-                        color: formData.role === role ? 'white' : '#656d4f'
+                        borderColor: '#7a9152',
+                        backgroundColor: formData.role === role ? '#7a9152' : 'transparent',
+                        color: formData.role === role ? 'white' : '#4a6b2a'
                       }}>
                         {role}
                       </div>
@@ -136,7 +136,7 @@ export default function RequestResourcesPage() {
 
               {/* Child's Age */}
               <div>
-                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#656d4f' }}>
+                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
                   <Calendar className="w-5 h-5" />
                   <span>Child's Age</span>
                 </label>
@@ -149,9 +149,9 @@ export default function RequestResourcesPage() {
                   style={{ 
                     borderColor: '#e1d0bc',
                     backgroundColor: '#fbeddb',
-                    color: '#656d4f'
+                    color: '#4a6b2a'
                   }}
-                  onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                  onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                   onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                 >
                   <option value="">Select age range</option>
@@ -165,7 +165,7 @@ export default function RequestResourcesPage() {
 
               {/* Specific Challenge */}
               <div>
-                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#656d4f' }}>
+                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
                   <MessageSquare className="w-5 h-5" />
                   <span>What specific challenge are you facing?</span>
                 </label>
@@ -180,16 +180,16 @@ export default function RequestResourcesPage() {
                   style={{ 
                     borderColor: '#e1d0bc',
                     backgroundColor: '#fbeddb',
-                    color: '#656d4f'
+                    color: '#4a6b2a'
                   }}
-                  onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                  onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                   onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                 />
               </div>
 
               {/* Resource Type */}
               <div>
-                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#656d4f' }}>
+                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
                   <FileText className="w-5 h-5" />
                   <span>What type of resource would help most?</span>
                 </label>
@@ -217,9 +217,9 @@ export default function RequestResourcesPage() {
                           : 'border-opacity-30 hover:border-opacity-50'
                       }`}
                       style={{ 
-                        borderColor: '#b97d83',
-                        backgroundColor: formData.resourceType === resource ? '#b97d83' : 'transparent',
-                        color: formData.resourceType === resource ? 'white' : '#656d4f'
+                        borderColor: '#9c6a42',
+                        backgroundColor: formData.resourceType === resource ? '#9c6a42' : 'transparent',
+                        color: formData.resourceType === resource ? 'white' : '#4a6b2a'
                       }}>
                         {resource}
                       </div>
@@ -230,7 +230,7 @@ export default function RequestResourcesPage() {
 
               {/* Email */}
               <div>
-                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#656d4f' }}>
+                <label className="flex items-center space-x-2 text-lg font-medium mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
                   <Mail className="w-5 h-5" />
                   <span>Email Address</span>
                 </label>
@@ -245,16 +245,16 @@ export default function RequestResourcesPage() {
                   style={{ 
                     borderColor: '#e1d0bc',
                     backgroundColor: '#fbeddb',
-                    color: '#656d4f'
+                    color: '#4a6b2a'
                   }}
-                  onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                  onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                   onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                 />
               </div>
 
               {/* Optional Situation */}
               <div>
-                <label className="text-lg font-medium mb-4 font-crimson block" style={{ color: '#656d4f' }}>
+                <label className="text-lg font-medium mb-4 font-crimson block" style={{ color: '#4a6b2a' }}>
                   Tell us more about your situation <span className="text-sm opacity-60">(optional)</span>
                 </label>
                 <textarea
@@ -267,9 +267,9 @@ export default function RequestResourcesPage() {
                   style={{ 
                     borderColor: '#e1d0bc',
                     backgroundColor: '#fbeddb',
-                    color: '#656d4f'
+                    color: '#4a6b2a'
                   }}
-                  onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                  onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                   onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                 />
               </div>
@@ -281,9 +281,9 @@ export default function RequestResourcesPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 rounded-full text-lg font-medium text-white transition organic-shadow"
-                  style={{ backgroundColor: '#656d4f' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#656d4f'}
+                  style={{ backgroundColor: '#4a6b2a' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
                 >
                   Request My Custom Resource
                 </motion.button>
@@ -295,7 +295,7 @@ export default function RequestResourcesPage() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="text-center p-6 rounded-lg"
-                  style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)', color: '#656d4f' }}
+                  style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)', color: '#4a6b2a' }}
                 >
                   <div className="flex items-center justify-center space-x-2 mb-2">
                     <HandDrawnTree size={24} />
@@ -314,7 +314,7 @@ export default function RequestResourcesPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-center mt-12"
           >
-            <p className="text-lg" style={{ color: '#9b9b84' }}>
+            <p className="text-lg" style={{ color: '#7a9152' }}>
               All resources are created with love, based on evidence, and designed to strengthen relationships.
             </p>
           </motion.div>

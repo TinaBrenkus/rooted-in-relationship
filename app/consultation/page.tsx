@@ -52,7 +52,7 @@ export default function ConsultationPage() {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-3">
               <HandDrawnTree size={40} />
-              <span className="text-xl font-semibold font-crimson" style={{ color: '#656d4f' }}>
+              <span className="text-xl font-semibold font-crimson" style={{ color: '#4a6b2a' }}>
                 Rooted In Relationship
               </span>
             </Link>
@@ -60,7 +60,7 @@ export default function ConsultationPage() {
             <Link 
               href="/"
               className="flex items-center space-x-2 transition hover:opacity-70" 
-              style={{ color: '#656d4f' }}
+              style={{ color: '#4a6b2a' }}
             >
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Home</span>
@@ -78,16 +78,16 @@ export default function ConsultationPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}>
-              <Video className="w-6 h-6" style={{ color: '#656d4f' }} />
-              <span className="font-medium" style={{ color: '#656d4f' }}>Virtual Consultation</span>
+            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}>
+              <Video className="w-6 h-6" style={{ color: '#4a6b2a' }} />
+              <span className="font-medium" style={{ color: '#4a6b2a' }}>Virtual Consultation</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6 font-crimson" style={{ color: '#656d4f' }}>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
               Let's Work Together
             </h1>
             
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#7a9152' }}>
               Get personalized support and evidence-based strategies tailored to your unique situation. 
               Together, we'll create a path forward that works for your child and family.
             </p>
@@ -109,13 +109,13 @@ export default function ConsultationPage() {
               className="organic-card p-8 rounded-2xl organic-shadow"
             >
               <div className="flex items-center space-x-3 mb-6">
-                <Clock className="w-6 h-6" style={{ color: '#9b9b84' }} />
-                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+                <Clock className="w-6 h-6" style={{ color: '#7a9152' }} />
+                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                   60-Minute Sessions
                 </h2>
               </div>
               
-              <p className="mb-6" style={{ color: '#9b9b84' }}>
+              <p className="mb-6" style={{ color: '#7a9152' }}>
                 Each consultation is a full hour dedicated to understanding your challenges 
                 and developing practical solutions.
               </p>
@@ -128,8 +128,8 @@ export default function ConsultationPage() {
                   'Follow-up resources and action plan'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-2">
-                    <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#b97d83' }} />
-                    <span style={{ color: '#656d4f' }}>{item}</span>
+                    <CheckCircle className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: '#9c6a42' }} />
+                    <span style={{ color: '#4a6b2a' }}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -144,30 +144,30 @@ export default function ConsultationPage() {
               className="organic-card p-8 rounded-2xl organic-shadow"
             >
               <div className="flex items-center space-x-3 mb-6">
-                <Sparkles className="w-6 h-6" style={{ color: '#9b9b84' }} />
-                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>
+                <Sparkles className="w-6 h-6" style={{ color: '#7a9152' }} />
+                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>
                   What to Expect
                 </h2>
               </div>
               
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>Before We Meet:</h3>
-                  <p style={{ color: '#9b9b84' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>Before We Meet:</h3>
+                  <p style={{ color: '#7a9152' }}>
                     I'll review your intake form to understand your specific needs and prepare relevant resources.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>During Our Session:</h3>
-                  <p style={{ color: '#9b9b84' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>During Our Session:</h3>
+                  <p style={{ color: '#7a9152' }}>
                     We'll dive deep into your challenges, explore what's working, and collaborate on solutions.
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#656d4f' }}>After We Meet:</h3>
-                  <p style={{ color: '#9b9b84' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: '#4a6b2a' }}>After We Meet:</h3>
+                  <p style={{ color: '#7a9152' }}>
                     You'll receive a summary of our discussion, action steps, and customized resources.
                   </p>
                 </div>
@@ -188,17 +188,17 @@ export default function ConsultationPage() {
             className="text-center p-8 rounded-2xl"
             style={{ background: 'linear-gradient(135deg, rgba(225, 208, 188, 0.3) 0%, rgba(201, 168, 141, 0.2) 100%)' }}
           >
-            <DollarSign className="w-12 h-12 mx-auto mb-4" style={{ color: '#b97d83' }} />
-            <h2 className="text-3xl font-bold mb-4 font-crimson" style={{ color: '#656d4f' }}>
+            <DollarSign className="w-12 h-12 mx-auto mb-4" style={{ color: '#9c6a42' }} />
+            <h2 className="text-3xl font-bold mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
               Investment
             </h2>
-            <p className="text-4xl font-bold mb-4" style={{ color: '#9b9b84' }}>
+            <p className="text-4xl font-bold mb-4" style={{ color: '#7a9152' }}>
               $150
             </p>
-            <p className="text-lg" style={{ color: '#656d4f' }}>
+            <p className="text-lg" style={{ color: '#4a6b2a' }}>
               for a 60-minute virtual consultation
             </p>
-            <p className="mt-4 text-sm" style={{ color: '#9b9b84' }}>
+            <p className="mt-4 text-sm" style={{ color: '#7a9152' }}>
               This includes the session, follow-up resources, and an action plan
             </p>
           </motion.div>
@@ -214,7 +214,7 @@ export default function ConsultationPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-center mb-8 font-crimson" style={{ color: '#656d4f' }}>
+            <h2 className="text-3xl font-bold text-center mb-8 font-crimson" style={{ color: '#4a6b2a' }}>
               Schedule Your Consultation
             </h2>
             
@@ -222,14 +222,14 @@ export default function ConsultationPage() {
               
               {/* Contact Form */}
               <div className="organic-card p-8 rounded-2xl organic-shadow">
-                <h3 className="text-xl font-semibold mb-6 font-crimson" style={{ color: '#656d4f' }}>
+                <h3 className="text-xl font-semibold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
                   Tell Me About Your Needs
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Name */}
                   <div>
-                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                       <User className="w-4 h-4" />
                       <span>Your Name</span>
                     </label>
@@ -243,16 +243,16 @@ export default function ConsultationPage() {
                       style={{ 
                         borderColor: '#e1d0bc',
                         backgroundColor: '#fbeddb',
-                        color: '#656d4f'
+                        color: '#4a6b2a'
                       }}
-                      onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                      onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                       onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                     />
                   </div>
                   
                   {/* Email */}
                   <div>
-                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                       <Mail className="w-4 h-4" />
                       <span>Email Address</span>
                     </label>
@@ -266,16 +266,16 @@ export default function ConsultationPage() {
                       style={{ 
                         borderColor: '#e1d0bc',
                         backgroundColor: '#fbeddb',
-                        color: '#656d4f'
+                        color: '#4a6b2a'
                       }}
-                      onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                      onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                       onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                     />
                   </div>
                   
                   {/* Phone */}
                   <div>
-                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                       <Phone className="w-4 h-4" />
                       <span>Phone Number</span>
                     </label>
@@ -289,16 +289,16 @@ export default function ConsultationPage() {
                       style={{ 
                         borderColor: '#e1d0bc',
                         backgroundColor: '#fbeddb',
-                        color: '#656d4f'
+                        color: '#4a6b2a'
                       }}
-                      onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                      onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                       onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                     />
                   </div>
                   
                   {/* Best Time to Call */}
                   <div>
-                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                       <Clock className="w-4 h-4" />
                       <span>Best Time to Call</span>
                     </label>
@@ -311,22 +311,23 @@ export default function ConsultationPage() {
                       style={{ 
                         borderColor: '#e1d0bc',
                         backgroundColor: '#fbeddb',
-                        color: '#656d4f'
+                        color: '#4a6b2a'
                       }}
-                      onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                      onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                       onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                     >
                       <option value="">Select a time</option>
-                      <option value="morning">Morning (8am-12pm)</option>
-                      <option value="afternoon">Afternoon (12pm-5pm)</option>
-                      <option value="evening">Evening (5pm-8pm)</option>
+                      <option value="weekday-evening">Mon-Thurs evening (4pm-9pm PST)</option>
+                      <option value="weekend-morning">Weekend morning (9am-12pm PST)</option>
+                      <option value="weekend-afternoon">Weekend afternoon (12pm-5pm PST)</option>
+                      <option value="weekend-evening">Weekend evening (5pm-8pm PST)</option>
                       <option value="flexible">I'm flexible</option>
                     </select>
                   </div>
                   
                   {/* Description */}
                   <div>
-                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                    <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                       <MessageSquare className="w-4 h-4" />
                       <span>What would you like help with?</span>
                     </label>
@@ -341,9 +342,9 @@ export default function ConsultationPage() {
                       style={{ 
                         borderColor: '#e1d0bc',
                         backgroundColor: '#fbeddb',
-                        color: '#656d4f'
+                        color: '#4a6b2a'
                       }}
-                      onFocus={(e) => e.currentTarget.style.borderColor = '#9b9b84'}
+                      onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                       onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                     />
                   </div>
@@ -354,9 +355,9 @@ export default function ConsultationPage() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-full px-6 py-4 rounded-full text-white font-medium transition organic-shadow"
-                    style={{ backgroundColor: '#656d4f' }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#656d4f'}
+                    style={{ backgroundColor: '#4a6b2a' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
                   >
                     Request Consultation
                   </motion.button>
@@ -368,9 +369,9 @@ export default function ConsultationPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="mt-6 p-4 rounded-lg text-center"
-                    style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)', color: '#656d4f' }}
+                    style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)', color: '#4a6b2a' }}
                   >
-                    <CheckCircle className="w-6 h-6 mx-auto mb-2" style={{ color: '#9b9b84' }} />
+                    <CheckCircle className="w-6 h-6 mx-auto mb-2" style={{ color: '#7a9152' }} />
                     <p className="font-semibold">Thank you for reaching out!</p>
                     <p className="text-sm mt-1">I'll contact you within 24 hours to schedule our consultation.</p>
                   </motion.div>
@@ -379,32 +380,31 @@ export default function ConsultationPage() {
               
               {/* Calendar Placeholder */}
               <div className="organic-card p-8 rounded-2xl organic-shadow">
-                <h3 className="text-xl font-semibold mb-6 font-crimson" style={{ color: '#656d4f' }}>
+                <h3 className="text-xl font-semibold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
                   Or Book Directly
                 </h3>
                 
                 <div className="text-center py-12 px-6 rounded-lg" style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}>
-                  <Calendar className="w-16 h-16 mx-auto mb-4" style={{ color: '#b97d83' }} />
-                  <p className="font-medium mb-2" style={{ color: '#656d4f' }}>
+                  <Calendar className="w-16 h-16 mx-auto mb-4" style={{ color: '#9c6a42' }} />
+                  <p className="font-medium mb-2" style={{ color: '#4a6b2a' }}>
                     Online Calendar Coming Soon
                   </p>
-                  <p className="text-sm" style={{ color: '#9b9b84' }}>
+                  <p className="text-sm" style={{ color: '#7a9152' }}>
                     Soon you'll be able to book directly into my calendar. 
                     For now, please use the form and I'll reach out personally.
                   </p>
                 </div>
                 
-                <div className="mt-6 p-4 rounded-lg" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}>
-                  <h4 className="font-semibold mb-3" style={{ color: '#656d4f' }}>Available Times:</h4>
-                  <ul className="space-y-2 text-sm" style={{ color: '#9b9b84' }}>
-                    <li>• Monday-Thursday: 9am - 6pm PST</li>
-                    <li>• Friday: 9am - 3pm PST</li>
-                    <li>• Evening appointments available upon request</li>
+                <div className="mt-6 p-4 rounded-lg" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}>
+                  <h4 className="font-semibold mb-3" style={{ color: '#4a6b2a' }}>Available Times:</h4>
+                  <ul className="space-y-2 text-sm" style={{ color: '#7a9152' }}>
+                    <li>• Monday-Thursday: 4pm - 9pm PST</li>
+                    <li>• Saturday &amp; Sunday: 9am - 8pm PST</li>
                   </ul>
                 </div>
                 
                 <div className="mt-6 p-4 rounded-lg" style={{ backgroundColor: 'rgba(201, 168, 141, 0.1)' }}>
-                  <p className="text-sm" style={{ color: '#656d4f' }}>
+                  <p className="text-sm" style={{ color: '#4a6b2a' }}>
                     <strong>Note:</strong> If you need immediate support or are in crisis, 
                     please contact your local emergency services or crisis hotline.
                   </p>
@@ -425,10 +425,10 @@ export default function ConsultationPage() {
             viewport={{ once: true }}
           >
             <HandDrawnTree size={60} className="mx-auto mb-6 opacity-30" />
-            <h2 className="text-2xl font-bold mb-4 font-crimson" style={{ color: '#656d4f' }}>
+            <h2 className="text-2xl font-bold mb-4 font-crimson" style={{ color: '#4a6b2a' }}>
               You don't have to figure this out alone
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#9b9b84' }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#7a9152' }}>
               With the right support and strategies, challenging behaviors can transform into 
               opportunities for connection and growth.
             </p>

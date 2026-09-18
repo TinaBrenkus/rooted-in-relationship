@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import HandDrawnTree from './components/HandDrawnTree';
 import { 
   Heart, 
@@ -37,20 +38,15 @@ export default function HomePage() {
       <nav className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50" style={{ backgroundColor: 'rgba(251, 237, 219, 0.95)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
-              <HandDrawnTree size={40} />
-              <span className="text-xl font-semibold font-crimson" style={{ color: '#656d4f' }}>
-                Rooted In Relationship
-              </span>
-            </div>
+            <div aria-hidden="true"></div>
             
             <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>About</Link>
-              <Link href="/case-study" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Case Study</Link>
-              <a href="#parents" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>For Parents</a>
-              <a href="#teachers" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>For Teachers</a>
-              <Link href="/library" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Resource Library</Link>
-              <a href="#contact" className="hover:opacity-70 transition" style={{ color: '#656d4f' }}>Contact</a>
+              <Link href="/about" className="hover:opacity-70 transition" style={{ color: '#4a6b2a' }}>About</Link>
+              <Link href="/case-study" className="hover:opacity-70 transition" style={{ color: '#4a6b2a' }}>Case Study</Link>
+              <a href="#parents" className="hover:opacity-70 transition" style={{ color: '#4a6b2a' }}>For Parents</a>
+              <a href="#teachers" className="hover:opacity-70 transition" style={{ color: '#4a6b2a' }}>For Teachers</a>
+              <Link href="/library" className="hover:opacity-70 transition" style={{ color: '#4a6b2a' }}>Resource Library</Link>
+              <a href="#contact" className="hover:opacity-70 transition" style={{ color: '#4a6b2a' }}>Contact</a>
             </div>
             
             <button 
@@ -59,15 +55,15 @@ export default function HomePage() {
             >
               <div className="space-y-1">
                 <div className="w-6 h-0.5 transition-all" style={{ 
-                  backgroundColor: '#656d4f',
+                  backgroundColor: '#4a6b2a',
                   transform: mobileMenuOpen ? 'rotate(45deg) translateY(6px)' : 'none'
                 }}></div>
                 <div className="w-6 h-0.5 transition-all" style={{ 
-                  backgroundColor: '#656d4f',
+                  backgroundColor: '#4a6b2a',
                   opacity: mobileMenuOpen ? 0 : 1
                 }}></div>
                 <div className="w-6 h-0.5 transition-all" style={{ 
-                  backgroundColor: '#656d4f',
+                  backgroundColor: '#4a6b2a',
                   transform: mobileMenuOpen ? 'rotate(-45deg) translateY(-6px)' : 'none'
                 }}></div>
               </div>
@@ -83,12 +79,12 @@ export default function HomePage() {
               className="md:hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3" style={{ backgroundColor: 'rgba(251, 237, 219, 0.98)' }}>
-                <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>About</Link>
-                <Link href="/case-study" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>Case Study</Link>
-                <a href="#parents" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>For Parents</a>
-                <a href="#teachers" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>For Teachers</a>
-                <Link href="/library" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>Resource Library</Link>
-                <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#656d4f' }} onClick={() => setMobileMenuOpen(false)}>Contact</a>
+                <Link href="/about" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#4a6b2a' }} onClick={() => setMobileMenuOpen(false)}>About</Link>
+                <Link href="/case-study" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#4a6b2a' }} onClick={() => setMobileMenuOpen(false)}>Case Study</Link>
+                <a href="#parents" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#4a6b2a' }} onClick={() => setMobileMenuOpen(false)}>For Parents</a>
+                <a href="#teachers" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#4a6b2a' }} onClick={() => setMobileMenuOpen(false)}>For Teachers</a>
+                <Link href="/library" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#4a6b2a' }} onClick={() => setMobileMenuOpen(false)}>Resource Library</Link>
+                <a href="#contact" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/20 transition" style={{ color: '#4a6b2a' }} onClick={() => setMobileMenuOpen(false)}>Contact</a>
               </div>
             </motion.div>
           )}
@@ -98,32 +94,50 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-16 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-center">
+            {/* Logo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="w-full max-w-xs sm:max-w-sm lg:max-w-none mx-auto"
+            >
+              <Image
+                src="/logo-full.png"
+                alt="Rooted In Relationship – Behavior-Based Early Childhood Consulting"
+                width={1000}
+                height={899}
+                sizes="(min-width: 1024px) 560px, 384px"
+                className="w-full h-auto"
+                priority
+              />
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center lg:text-left"
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-crimson" style={{ color: '#656d4f' }}>
-                When children struggle with behavior, 
-                <span className="block" style={{ color: '#9b9b84' }}>there's always a reason.</span>
-                <span style={{ color: '#b97d83' }}>Let's find it together.</span>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight font-crimson" style={{ color: '#4a6b2a' }}>
+                When children struggle with behavior,
+                <span className="block" style={{ color: '#7a9152' }}>there's always a reason.</span>
+                <span style={{ color: '#9c6a42' }}>Let's find it together.</span>
               </h1>
-              
-              <p className="text-xl sm:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style={{ color: '#656d4f' }}>
+
+              <p className="text-xl sm:text-2xl mb-10 leading-relaxed" style={{ color: '#4a6b2a' }}>
                 Evidence-based behavior strategies rooted in relationship, not punishment.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                 <Link href="/library">
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors organic-shadow flex items-center space-x-2"
-                    style={{ backgroundColor: '#656d4f' }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#656d4f'}
+                    className="text-white px-8 py-4 rounded-full text-lg font-medium transition-colors organic-shadow flex items-center space-x-2 whitespace-nowrap"
+                    style={{ backgroundColor: '#4a6b2a' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
                   >
                     <BookOpen className="w-5 h-5" />
                     <span>Access Resource Library</span>
@@ -135,8 +149,8 @@ export default function HomePage() {
                   <motion.button 
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-white px-8 py-4 rounded-full text-lg font-medium transition-colors organic-shadow flex items-center space-x-2"
-                    style={{ color: '#656d4f', borderWidth: '2px', borderStyle: 'solid', borderColor: '#656d4f' }}
+                    className="bg-white px-8 py-4 rounded-full text-lg font-medium transition-colors organic-shadow flex items-center space-x-2 whitespace-nowrap"
+                    style={{ color: '#4a6b2a', borderWidth: '2px', borderStyle: 'solid', borderColor: '#4a6b2a' }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#fbeddb'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'white'}
                   >
@@ -151,7 +165,7 @@ export default function HomePage() {
         
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}></div>
+          <div className="absolute top-20 left-10 w-32 h-32 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(201, 168, 141, 0.1)' }}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(225, 208, 188, 0.05)' }}></div>
         </div>
@@ -167,23 +181,30 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(155, 155, 132, 0.1)' }}>
-              <HandHeart className="w-6 h-6" style={{ color: '#656d4f' }} />
-              <span className="font-medium" style={{ color: '#656d4f' }}>Our Philosophy</span>
+            <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)' }}>
+              <HandHeart className="w-6 h-6" style={{ color: '#4a6b2a' }} />
+              <span className="font-medium" style={{ color: '#4a6b2a' }}>Our Philosophy</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 font-crimson" style={{ color: '#656d4f' }}>
-              Children do well if they can
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
+              “Children succeed when they have what they need.”
             </h2>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#9b9b84' }}>
-              If they're not doing well, something is getting in the way. Our approach focuses on 
-              understanding the root causes of challenging behavior and building the skills children need to thrive.
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed mb-6" style={{ color: '#7a9152' }}>
+              We all do well when we have the skills needed to manage life’s expectations. At Rooted In Relationship,
+              we operate on the principles of Collaborative Problem Solving, and the statement, coined by Dr. Ross Greene,
+              that “Children (and adults) do well if they can.” We believe every child (and adult) wants to succeed.
+              When success feels out of reach, it’s not a matter of will or effort—it’s a matter of skill and support.
+            </p>
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#7a9152' }}>
+              Our work centers on curiosity, compassion, and relationship: uncovering what’s standing in the way,
+              understanding the “why” behind behavior, and nurturing the emotional and practical tools that help
+              children—and the adults who guide them—grow, connect, and thrive together.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Heart className="w-8 h-8" style={{ color: '#b97d83' }} />,
+                icon: <Heart className="w-8 h-8" style={{ color: '#9c6a42' }} />,
                 title: "Relationship-First",
                 description: "Building trust and connection before addressing behaviors"
               },
@@ -193,7 +214,7 @@ export default function HomePage() {
                 description: "Strategies rooted in research and proven to be effective"
               },
               {
-                icon: <Users className="w-8 h-8" style={{ color: '#9b9b84' }} />,
+                icon: <Users className="w-8 h-8" style={{ color: '#7a9152' }} />,
                 title: "Collaborative",
                 description: "Working together with families and educators as partners"
               }
@@ -208,20 +229,20 @@ export default function HomePage() {
                 style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(251, 237, 219, 0.8)';
-                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(101, 109, 79, 0.12)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(74, 107, 42, 0.12)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'rgba(251, 237, 219, 0.5)';
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full shadow-md mb-4" style={{ backgroundColor: '#fbeddb', boxShadow: '0 4px 20px rgba(101, 109, 79, 0.08)' }}>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full shadow-md mb-4" style={{ backgroundColor: '#fbeddb', boxShadow: '0 4px 20px rgba(74, 107, 42, 0.08)' }}>
                   {principle.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 font-crimson" style={{ color: '#656d4f' }}>
+                <h3 className="text-xl font-semibold mb-3 font-crimson" style={{ color: '#4a6b2a' }}>
                   {principle.title}
                 </h3>
-                <p className="leading-relaxed" style={{ color: '#9b9b84' }}>
+                <p className="leading-relaxed" style={{ color: '#7a9152' }}>
                   {principle.description}
                 </p>
               </motion.div>
@@ -246,12 +267,12 @@ export default function HomePage() {
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201, 168, 141, 0.2)' }}>
-                  <HomeIcon className="w-6 h-6" style={{ color: '#b97d83' }} />
+                  <HomeIcon className="w-6 h-6" style={{ color: '#9c6a42' }} />
                 </div>
-                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>For Parents</h2>
+                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>For Parents</h2>
               </div>
               
-              <p className="mb-6 leading-relaxed" style={{ color: '#9b9b84' }}>
+              <p className="mb-6 leading-relaxed" style={{ color: '#7a9152' }}>
                 Parenting a child with challenging behaviors can feel overwhelming. You're not alone, 
                 and there's hope. Learn practical, compassionate strategies that work.
               </p>
@@ -265,15 +286,15 @@ export default function HomePage() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-2">
                     <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0" style={{ backgroundColor: 'rgba(201, 168, 141, 0.2)' }}>
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#b97d83' }}></div>
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9c6a42' }}></div>
                     </div>
-                    <span style={{ color: '#656d4f' }}>{item}</span>
+                    <span style={{ color: '#4a6b2a' }}>{item}</span>
                   </li>
                 ))}
               </ul>
               
               <Link href="/library">
-                <button className="text-white px-6 py-3 rounded-full transition-colors font-medium flex items-center space-x-2" style={{ backgroundColor: '#b97d83' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#b97d83'}>
+                <button className="text-white px-6 py-3 rounded-full transition-colors font-medium flex items-center space-x-2" style={{ backgroundColor: '#9c6a42' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9c6a42'}>
                   <span>Parent Resources</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -290,13 +311,13 @@ export default function HomePage() {
               id="teachers"
             >
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(155, 155, 132, 0.2)' }}>
-                  <GraduationCap className="w-6 h-6" style={{ color: '#9b9b84' }} />
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(122, 145, 82, 0.2)' }}>
+                  <GraduationCap className="w-6 h-6" style={{ color: '#7a9152' }} />
                 </div>
-                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#656d4f' }}>For Teachers</h2>
+                <h2 className="text-2xl font-bold font-crimson" style={{ color: '#4a6b2a' }}>For Teachers</h2>
               </div>
               
-              <p className="mb-6 leading-relaxed" style={{ color: '#9b9b84' }}>
+              <p className="mb-6 leading-relaxed" style={{ color: '#7a9152' }}>
                 Supporting children with challenging behaviors in the classroom requires specific skills 
                 and strategies. Get the tools you need to create inclusive, supportive learning environments.
               </p>
@@ -309,16 +330,16 @@ export default function HomePage() {
                   "Professional development workshops"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-2">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0" style={{ backgroundColor: 'rgba(155, 155, 132, 0.2)' }}>
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9b9b84' }}></div>
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0" style={{ backgroundColor: 'rgba(122, 145, 82, 0.2)' }}>
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9152' }}></div>
                     </div>
-                    <span style={{ color: '#656d4f' }}>{item}</span>
+                    <span style={{ color: '#4a6b2a' }}>{item}</span>
                   </li>
                 ))}
               </ul>
               
               <Link href="/library">
-                <button className="text-white px-6 py-3 rounded-full transition-colors font-medium flex items-center space-x-2" style={{ backgroundColor: '#9b9b84' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#656d4f'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}>
+                <button className="text-white px-6 py-3 rounded-full transition-colors font-medium flex items-center space-x-2" style={{ backgroundColor: '#7a9152' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}>
                   <span>Educator Resources</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -329,7 +350,7 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter Signup - Hidden for now */}
-      {/* <section className="py-20 text-white" style={{ backgroundColor: '#656d4f' }} id="resources">
+      {/* <section className="py-20 text-white" style={{ backgroundColor: '#4a6b2a' }} id="resources">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -359,7 +380,7 @@ export default function HomePage() {
                   placeholder="Enter your email"
                   required
                   className="flex-1 px-4 py-3 rounded-full placeholder-stone-500 focus:outline-none focus:ring-2"
-                  style={{ color: '#656d4f', backgroundColor: '#fbeddb', borderColor: '#9b9b84' }}
+                  style={{ color: '#4a6b2a', backgroundColor: '#fbeddb', borderColor: '#7a9152' }}
                   onFocus={(e) => e.currentTarget.style.boxShadow = '0 0 0 2px rgba(201, 168, 141, 0.5)'}
                   onBlur={(e) => e.currentTarget.style.boxShadow = 'none'}
                 />
@@ -368,9 +389,9 @@ export default function HomePage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="text-white px-6 py-3 rounded-full transition-colors font-medium flex-shrink-0"
-                  style={{ backgroundColor: '#b97d83' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#b97d83'}
+                  style={{ backgroundColor: '#9c6a42' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9c6a42'}
                 >
                   Subscribe
                 </motion.button>
@@ -401,15 +422,15 @@ export default function HomePage() {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full mb-6" style={{ backgroundColor: 'rgba(201, 168, 141, 0.1)' }}>
-              <BookOpen className="w-6 h-6" style={{ color: '#b97d83' }} />
-              <span className="font-medium" style={{ color: '#656d4f' }}>Get Support</span>
+              <BookOpen className="w-6 h-6" style={{ color: '#9c6a42' }} />
+              <span className="font-medium" style={{ color: '#4a6b2a' }}>Get Support</span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 font-crimson" style={{ color: '#656d4f' }}>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 font-crimson" style={{ color: '#4a6b2a' }}>
               Need Resources Now?
             </h2>
             
-            <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed" style={{ color: '#9b9b84' }}>
+            <p className="text-xl mb-8 max-w-2xl mx-auto leading-relaxed" style={{ color: '#7a9152' }}>
               Every challenge is unique. Tell me what you're facing and I'll create personalized resources 
               based on evidence and built with care.
             </p>
@@ -418,7 +439,7 @@ export default function HomePage() {
             <div className="max-w-lg mx-auto">
               <form className="space-y-6">
                 <div className="text-left">
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                     I am a...
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -432,8 +453,8 @@ export default function HomePage() {
                         />
                         <div className="p-3 rounded-lg border-2 text-center cursor-pointer transition hover:border-opacity-50"
                           style={{ 
-                            borderColor: 'rgba(155, 155, 132, 0.3)',
-                            color: '#656d4f'
+                            borderColor: 'rgba(122, 145, 82, 0.3)',
+                            color: '#4a6b2a'
                           }}>
                           {role}
                         </div>
@@ -443,7 +464,7 @@ export default function HomePage() {
                 </div>
                 
                 <div className="text-left">
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                     My biggest challenge right now is...
                   </label>
                   <textarea
@@ -453,13 +474,13 @@ export default function HomePage() {
                     style={{ 
                       borderColor: '#e1d0bc',
                       backgroundColor: '#fbeddb',
-                      color: '#656d4f'
+                      color: '#4a6b2a'
                     }}
                   />
                 </div>
                 
                 <div className="text-left">
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#656d4f' }}>
+                  <label className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                     Email
                   </label>
                   <input
@@ -469,7 +490,7 @@ export default function HomePage() {
                     style={{ 
                       borderColor: '#e1d0bc',
                       backgroundColor: '#fbeddb',
-                      color: '#656d4f'
+                      color: '#4a6b2a'
                     }}
                   />
                 </div>
@@ -480,9 +501,9 @@ export default function HomePage() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 rounded-full text-white font-medium transition organic-shadow"
-                    style={{ backgroundColor: '#656d4f' }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9b9b84'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#656d4f'}
+                    style={{ backgroundColor: '#4a6b2a' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
                   >
                     Get My Custom Resources
                   </motion.button>
@@ -494,8 +515,8 @@ export default function HomePage() {
                       whileTap={{ scale: 0.95 }}
                       className="px-8 py-4 rounded-full font-medium transition"
                       style={{ 
-                        color: '#656d4f',
-                        border: '2px solid #656d4f'
+                        color: '#4a6b2a',
+                        border: '2px solid #4a6b2a'
                       }}
                     >
                       Full Form →
@@ -505,7 +526,7 @@ export default function HomePage() {
               </form>
             </div>
             
-            <p className="mt-8 text-sm" style={{ color: '#9b9b84' }}>
+            <p className="mt-8 text-sm" style={{ color: '#7a9152' }}>
               I build resources based on real needs from real families and educators.
             </p>
           </motion.div>
@@ -513,7 +534,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="text-white py-12" style={{ backgroundColor: '#9b9b84' }} id="contact">
+      <footer className="text-white py-12" style={{ backgroundColor: '#7a9152' }} id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
@@ -545,7 +566,7 @@ export default function HomePage() {
               <div className="space-y-2" style={{ color: '#e1d0bc' }}>
                 <p>Ready to start your journey?</p>
                 <Link href="/consultation">
-                  <button className="text-white px-6 py-2 rounded-full transition-colors" style={{ backgroundColor: '#656d4f' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b97d83'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#656d4f'}>
+                  <button className="text-white px-6 py-2 rounded-full transition-colors" style={{ backgroundColor: '#4a6b2a' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9c6a42'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}>
                     Request Consultation
                   </button>
                 </Link>
