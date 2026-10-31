@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   title: "Rooted In Relationship - Early Childhood Special Education Consulting",
   description: "Evidence-based behavior strategies rooted in relationship, not punishment. Supporting children, parents, and teachers with compassionate, effective approaches.",
   keywords: "early childhood, special education, behavior support, child development, positive behavior, relationship-based, consulting",
+  metadataBase: new URL("https://rooted-in-relationship.vercel.app"),
+  openGraph: {
+    title: "Rooted In Relationship - Early Childhood Special Education Consulting",
+    description: "Evidence-based behavior strategies rooted in relationship, not punishment.",
+    url: "/",
+    siteName: "Rooted In Relationship",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Rooted In Relationship logo" }],
+  },
 };
 
 export const viewport: Viewport = {
