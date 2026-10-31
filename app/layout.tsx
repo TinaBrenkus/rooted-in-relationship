@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Crimson_Text } from "next/font/google";
 import "./globals.css";
 
@@ -13,7 +13,14 @@ export const metadata: Metadata = {
   title: "Rooted In Relationship - Early Childhood Special Education Consulting",
   description: "Evidence-based behavior strategies rooted in relationship, not punishment. Supporting children, parents, and teachers with compassionate, effective approaches.",
   keywords: "early childhood, special education, behavior support, child development, positive behavior, relationship-based, consulting",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#fbeddb",
+  colorScheme: "only light",
 };
 
 export default function RootLayout({

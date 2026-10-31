@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: only light;
   --background: #fbeddb;
   --foreground: #4a6b2a;
   
