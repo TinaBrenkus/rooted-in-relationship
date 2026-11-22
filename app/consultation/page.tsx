@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import HandDrawnTree from '../components/HandDrawnTree';
+import { useSpamGuard, submitForm } from '../components/useSpamGuard';
 import { 
   ArrowLeft,
   Clock,
@@ -28,12 +29,23 @@ export default function ConsultationPage() {
     description: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+  const { honeypot, spamFields } = useSpamGuard();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setIsSubmitting(true);
+    setError('');
+    try {
+      await submitForm('consultation', { ...formData, ...spamFields() });
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', phone: '', bestTime: '', description: '' });
+    } catch {
+      setError('Sorry, your request didn’t go through. Please try again in a moment.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -227,6 +239,7 @@ export default function ConsultationPage() {
                 </h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {honeypot}
                   {/* Name */}
                   <div>
                     <label className="flex items-center space-x-2 text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
@@ -365,19 +378,26 @@ export default function ConsultationPage() {
                   </div>
 
                   {/* Submit Button */}
+                  {error && (
+                    <p className="text-sm text-center p-3 rounded-lg" role="alert" style={{ backgroundColor: 'rgba(156, 106, 66, 0.12)', color: '#7a4a28' }}>
+                      {error}
+                    </p>
+                  )}
+
                   <motion.button
                     type="submit"
+                    disabled={isSubmitting}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full px-6 py-4 rounded-full text-white font-medium transition organic-shadow"
+                    className="w-full px-6 py-4 rounded-full text-white font-medium transition organic-shadow disabled:opacity-70 disabled:cursor-wait"
                     style={{ backgroundColor: '#4a6b2a' }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
                   >
-                    Request Consultation
+                    {isSubmitting ? 'Sending…' : 'Request Consultation'}
                   </motion.button>
                 </form>
-                
+
                 {/* Success Message */}
                 {isSubmitted && (
                   <motion.div

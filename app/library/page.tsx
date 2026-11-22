@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import HandDrawnTree from '../components/HandDrawnTree';
+import { useSpamGuard, submitForm } from '../components/useSpamGuard';
 import { 
   ArrowLeft,
   BookOpen,
@@ -24,18 +25,28 @@ export default function ResourceLibraryPage() {
   const [hasAccess, setHasAccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const { honeypot, spamFields } = useSpamGuard();
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate email submission
-    setTimeout(() => {
-      setHasAccess(true);
-      setIsSubmitting(false);
-      // In production, this would save email to database
+
+    // Send the signup to Tara. Unlock the library even if sending fails, so a
+    // hiccup on our side never locks a parent or teacher out of the resources.
+    try {
+      await submitForm('library', { email, ...spamFields() });
+    } catch (err) {
+      console.error('Library signup failed to send:', err);
+    }
+
+    setHasAccess(true);
+    setIsSubmitting(false);
+    try {
       localStorage.setItem('libraryAccess', 'true');
       localStorage.setItem('libraryEmail', email);
-    }, 1000);
+    } catch {
+      // Private browsing can block storage; access still works for this visit.
+    }
   };
 
   // Check if user already has access
@@ -183,6 +194,7 @@ export default function ResourceLibraryPage() {
               </p>
               
               <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto">
+                {honeypot}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <input
                     type="email"

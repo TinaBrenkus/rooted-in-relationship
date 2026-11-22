@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import HandDrawnTree from '../components/HandDrawnTree';
+import { useSpamGuard, submitForm } from '../components/useSpamGuard';
 import { 
   ArrowLeft,
   User,
@@ -25,11 +26,23 @@ export default function RequestResourcesPage() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+  const { honeypot, spamFields } = useSpamGuard();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setIsSubmitting(true);
+    setError('');
+    try {
+      await submitForm('custom-support', { ...formData, source: 'Resources', ...spamFields() });
+      setIsSubmitted(true);
+      setFormData({ role: '', childAge: '', challenge: '', resourceType: '', email: '', situation: '' });
+    } catch {
+      setError('Sorry, your request didn’t go through. Please try again in a moment.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -99,6 +112,7 @@ export default function RequestResourcesPage() {
             className="organic-card p-8 rounded-2xl organic-shadow"
           >
             <form onSubmit={handleSubmit} className="space-y-8">
+              {honeypot}
               
               {/* Role Selection */}
               <div>
@@ -274,18 +288,25 @@ export default function RequestResourcesPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-center p-3 rounded-lg" role="alert" style={{ backgroundColor: 'rgba(156, 106, 66, 0.12)', color: '#7a4a28' }}>
+                  {error}
+                </p>
+              )}
+
               {/* Submit Button */}
               <div className="flex justify-center">
                 <motion.button
                   type="submit"
+                  disabled={isSubmitting}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 rounded-full text-lg font-medium text-white transition organic-shadow"
+                  className="px-8 py-4 rounded-full text-lg font-medium text-white transition organic-shadow disabled:opacity-70 disabled:cursor-wait"
                   style={{ backgroundColor: '#4a6b2a' }}
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
                 >
-                  Request My Custom Resource
+                  {isSubmitting ? 'Sending…' : 'Request My Custom Resource'}
                 </motion.button>
               </div>
 

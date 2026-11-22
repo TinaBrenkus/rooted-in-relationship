@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import HandDrawnTree from './components/HandDrawnTree';
+import { useSpamGuard, submitForm } from './components/useSpamGuard';
 import { 
   Heart, 
   Users, 
@@ -22,6 +23,27 @@ export default function HomePage() {
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // "Need Resources Now?" quick form
+  const [quickForm, setQuickForm] = useState({ role: '', challenge: '', email: '' });
+  const [quickSending, setQuickSending] = useState(false);
+  const [quickSent, setQuickSent] = useState(false);
+  const [quickError, setQuickError] = useState('');
+  const { honeypot, spamFields } = useSpamGuard();
+
+  const handleQuickSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setQuickSending(true);
+    setQuickError('');
+    try {
+      await submitForm('quick-request', { ...quickForm, ...spamFields() });
+      setQuickSent(true);
+    } catch {
+      setQuickError('Sorry, that didn’t go through. Please try again in a moment.');
+    } finally {
+      setQuickSending(false);
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -440,11 +462,21 @@ export default function HomePage() {
             
             {/* Quick Form */}
             <div className="max-w-lg mx-auto">
-              <form className="space-y-6">
-                <div className="text-left">
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
+              {quickSent ? (
+                <div className="p-6 rounded-lg text-center" role="status" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)', color: '#4a6b2a' }}>
+                  <div className="flex items-center justify-center space-x-2 mb-2">
+                    <HandDrawnTree size={24} />
+                    <span className="font-semibold font-crimson">Thank you!</span>
+                  </div>
+                  <p>I&apos;ll review what you&apos;re facing and be in touch by email.</p>
+                </div>
+              ) : (
+              <form onSubmit={handleQuickSubmit} className="space-y-6">
+                {honeypot}
+                <fieldset className="text-left">
+                  <legend className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                     I am a...
-                  </label>
+                  </legend>
                   <div className="grid grid-cols-2 gap-3">
                     {['Parent', 'Teacher', 'Caregiver', 'Other'].map((role) => (
                       <label key={role} className="relative">
@@ -452,25 +484,34 @@ export default function HomePage() {
                           type="radio"
                           name="quickRole"
                           value={role}
-                          className="sr-only"
+                          checked={quickForm.role === role}
+                          onChange={() => setQuickForm(f => ({ ...f, role }))}
+                          className="sr-only peer"
                         />
-                        <div className="p-3 rounded-lg border-2 text-center cursor-pointer transition hover:border-opacity-50"
-                          style={{ 
-                            borderColor: 'rgba(122, 145, 82, 0.3)',
-                            color: '#4a6b2a'
-                          }}>
+                        <div
+                          className="p-3 rounded-lg border-2 text-center cursor-pointer transition peer-focus-visible:ring-2 peer-focus-visible:ring-[#7a9152]"
+                          style={
+                            quickForm.role === role
+                              ? { borderColor: '#4a6b2a', backgroundColor: 'rgba(122, 145, 82, 0.15)', color: '#4a6b2a', fontWeight: 600 }
+                              : { borderColor: 'rgba(122, 145, 82, 0.3)', color: '#4a6b2a' }
+                          }
+                        >
                           {role}
                         </div>
                       </label>
                     ))}
                   </div>
-                </div>
+                </fieldset>
                 
                 <div className="text-left">
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
+                  <label htmlFor="quick-challenge" className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                     My biggest challenge right now is...
                   </label>
                   <textarea
+                    id="quick-challenge"
+                    name="challenge"
+                    value={quickForm.challenge}
+                    onChange={(e) => setQuickForm(f => ({ ...f, challenge: e.target.value }))}
                     rows={3}
                     placeholder="Brief description of what you're facing..."
                     className="w-full p-4 rounded-lg border-2 focus:outline-none transition placeholder-opacity-60"
@@ -483,11 +524,16 @@ export default function HomePage() {
                 </div>
                 
                 <div className="text-left">
-                  <label className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
+                  <label htmlFor="quick-email" className="block text-sm font-medium mb-2" style={{ color: '#4a6b2a' }}>
                     Email
                   </label>
                   <input
+                    id="quick-email"
                     type="email"
+                    name="email"
+                    required
+                    value={quickForm.email}
+                    onChange={(e) => setQuickForm(f => ({ ...f, email: e.target.value }))}
                     placeholder="your@email.com"
                     className="w-full p-4 rounded-lg border-2 focus:outline-none transition placeholder-opacity-60"
                     style={{ 
@@ -498,17 +544,24 @@ export default function HomePage() {
                   />
                 </div>
                 
+                {quickError && (
+                  <p className="text-sm text-center p-3 rounded-lg" role="alert" style={{ backgroundColor: 'rgba(156, 106, 66, 0.12)', color: '#7a4a28' }}>
+                    {quickError}
+                  </p>
+                )}
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <motion.button
                     type="submit"
+                    disabled={quickSending}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 rounded-full text-white font-medium transition organic-shadow"
+                    className="px-8 py-4 rounded-full text-white font-medium transition organic-shadow disabled:opacity-70 disabled:cursor-wait"
                     style={{ backgroundColor: '#4a6b2a' }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a9152'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}
                   >
-                    Get My Custom Resources
+                    {quickSending ? 'Sending…' : 'Get My Custom Resources'}
                   </motion.button>
                   
                   <Link href="/custom-support">
@@ -527,8 +580,9 @@ export default function HomePage() {
                   </Link>
                 </div>
               </form>
+              )}
             </div>
-            
+
             <p className="mt-8 text-sm" style={{ color: '#7a9152' }}>
               I build resources based on real needs from real families and educators.
             </p>
