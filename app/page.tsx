@@ -221,6 +221,51 @@ export default function HomePage() {
               understanding the “why” behind behavior, and nurturing the emotional and practical tools that help
               children—and the adults who guide them—grow, connect, and thrive together.
             </p>
+
+            {/* Tara's longer philosophy: left-aligned, since seven centered paragraphs are hard to read */}
+            <div className="flex justify-center my-10" aria-hidden="true">
+              <HandDrawnTree size={36} />
+            </div>
+            <div className="max-w-3xl mx-auto text-left space-y-6 text-lg leading-relaxed" style={{ color: '#7a9152' }}>
+              <p>
+                All children want to do well and want to meet the expectations of their adults—and when they’re
+                struggling, it’s not because they’re choosing to “misbehave,” but because something is getting in the way
+                and they do not have the skills needed to meet some expectations yet. Just like a tree needs strong roots,
+                healthy soil, water, and sun to grow, children need safe, loving relationships to feel secure and thrive.
+              </p>
+              <p>
+                A child’s brain grows from bottom up, starting with safety and connection. When those roots are
+                strong—through nurturing, meaningful, consistent support and calm guidance—children are better able to
+                handle challenges, manage their emotions, and learn new things. When they act out or shut down, it’s a
+                sign that they’re overwhelmed or missing something they need, not that they’re being “bad” or
+                “non-compliant.”
+              </p>
+              <p>
+                As an educator of young children (and their adults), I lead with curiosity and compassion. Instead of
+                asking, “why are they acting like this?” I ask, “what is the need they have that is not being met?”{' '}
+                <strong className="font-semibold" style={{ color: '#4a6b2a' }}>
+                  All behavior is communication, and an indication of an unmet need.
+                </strong>{' '}
+                We first focus on meeting the need, then on teaching the skills needed for the child to get that need met
+                in more adaptive (or positive) ways.
+              </p>
+              <p>
+                I believe relationships are the foundation for growth and that by staying connected—even (and
+                especially) during the hard moments—we can help children feel safe, understood, and capable of learning
+                new skills. The same is true for all of us, adults included!
+              </p>
+              <p>
+                <strong className="font-semibold" style={{ color: '#4a6b2a' }}>
+                  We are grounded in connection, not control.
+                </strong>{' '}
+                Children aren’t looking to take control from us, they just want to find some of their own. This is
+                developmentally appropriate, normal, typical, expected…and very very challenging for us as adults. While
+                what adults are often looking for is, “how do I get my child to stop____ (hitting, screaming, biting,
+                etc.)?,” the answer is always found with curiosity and investigation to identify the function that
+                behavior serves, and the need the person is trying to meet, then identifying the skills to teach and how
+                to teach them so that (in time) the child has different skills to meet that need.
+              </p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
