@@ -533,52 +533,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="text-white py-12" style={{ backgroundColor: '#7a9152' }} id="contact">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            {/* Brand */}
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <HandDrawnTree size={40} />
-                <span className="text-xl font-semibold font-crimson" style={{ color: '#fbeddb' }}>Rooted In Relationship</span>
-              </div>
-              <p className="leading-relaxed" style={{ color: '#e1d0bc' }}>
-                Supporting children, families, and educators with compassionate, evidence-based approaches to behavior support.
-              </p>
-            </div>
-            
-            {/* Quick Links */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4 font-crimson" style={{ color: '#fbeddb' }}>Quick Links</h3>
-              <ul className="space-y-2" style={{ color: '#e1d0bc' }}>
-                <li><a href="#about" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>About</a></li>
-                <li><a href="#parents" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>For Parents</a></li>
-                <li><a href="#teachers" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>For Teachers</a></li>
-                <li><Link href="/library" className="transition" style={{ color: '#e1d0bc' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fbeddb'} onMouseLeave={(e) => e.currentTarget.style.color = '#e1d0bc'}>Resource Library</Link></li>
-              </ul>
-            </div>
-            
-            {/* Contact */}
-            <div>
-              <h3 className="font-semibold text-lg mb-4 font-crimson" style={{ color: '#fbeddb' }}>Get in Touch</h3>
-              <div className="space-y-2" style={{ color: '#e1d0bc' }}>
-                <p>Ready to start your journey?</p>
-                <Link href="/consultation">
-                  <button className="text-white px-6 py-2 rounded-full transition-colors" style={{ backgroundColor: '#4a6b2a' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9c6a42'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#4a6b2a'}>
-                    Request Consultation
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-8 pt-8 text-center" style={{ borderTop: '1px solid rgba(225, 208, 188, 0.2)', color: '#e1d0bc' }}>
-            <p>&copy; 2024 Rooted In Relationship. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

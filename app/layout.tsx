@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Crimson_Text } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const crimsonText = Crimson_Text({ 
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} ${crimsonText.variable} antialiased bg-stone-50`}>
         {children}
+        <Footer />
       </body>
     </html>
   );

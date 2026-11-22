@@ -333,6 +333,7 @@ export default function ConsultationPage() {
                     </label>
                     <textarea
                       name="description"
+                      aria-describedby="description-note"
                       value={formData.description}
                       onChange={handleChange}
                       required
@@ -347,8 +348,22 @@ export default function ConsultationPage() {
                       onFocus={(e) => e.currentTarget.style.borderColor = '#7a9152'}
                       onBlur={(e) => e.currentTarget.style.borderColor = '#e1d0bc'}
                     />
+                    <p id="description-note" className="mt-2 text-sm" style={{ color: '#7a9152' }}>
+                      Please don&apos;t include medical diagnoses, records, or school documents such as IEPs or 504 plans. A general description is all I need to get started.
+                    </p>
                   </div>
-                  
+
+                  {/* Consultation Request Disclaimer */}
+                  <div className="p-4 rounded-lg text-sm" style={{ backgroundColor: 'rgba(122, 145, 82, 0.1)', color: '#4a6b2a' }}>
+                    <p className="font-semibold mb-2">By submitting this consultation request, you understand that:</p>
+                    <ul className="list-disc pl-5 space-y-1" style={{ color: '#7a9152' }}>
+                      <li>This is educational coaching, not medical or therapeutic treatment</li>
+                      <li>Information shared will be kept confidential but is not protected health information under HIPAA</li>
+                      <li>You should continue working with your child&apos;s existing healthcare and educational team</li>
+                      <li>Tara Neu is an independent educational consultant, not representing any school district or ESD</li>
+                    </ul>
+                  </div>
+
                   {/* Submit Button */}
                   <motion.button
                     type="submit"
