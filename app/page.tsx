@@ -206,17 +206,20 @@ export default function HomePage() {
               {
                 icon: <Heart className="w-8 h-8" style={{ color: '#9c6a42' }} />,
                 title: "Relationship-First",
-                description: "Building trust and connection before addressing behaviors"
+                description: "Building trust and connection before addressing behaviors",
+                href: "/approach/relationship-first"
               },
               {
-                icon: <Star className="w-8 h-8" style={{ color: '#e1d0bc' }} />,
+                icon: <Star className="w-8 h-8" style={{ color: '#c9a88d' }} />,
                 title: "Evidence-Based",
-                description: "Strategies rooted in research and proven to be effective"
+                description: "Strategies rooted in research and proven to be effective",
+                href: "/approach/evidence-based"
               },
               {
                 icon: <Users className="w-8 h-8" style={{ color: '#7a9152' }} />,
                 title: "Collaborative",
-                description: "Working together with families and educators as partners"
+                description: "Working together with families and educators as partners",
+                href: "/approach/collaborative"
               }
             ].map((principle, index) => (
               <motion.div
@@ -225,26 +228,26 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300"
-                style={{ backgroundColor: 'rgba(251, 237, 219, 0.5)' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(251, 237, 219, 0.8)';
-                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(74, 107, 42, 0.12)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(251, 237, 219, 0.5)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+                className="rounded-xl"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full shadow-md mb-4" style={{ backgroundColor: '#fbeddb', boxShadow: '0 4px 20px rgba(74, 107, 42, 0.08)' }}>
-                  {principle.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 font-crimson" style={{ color: '#4a6b2a' }}>
-                  {principle.title}
-                </h3>
-                <p className="leading-relaxed" style={{ color: '#7a9152' }}>
-                  {principle.description}
-                </p>
+                <Link
+                  href={principle.href}
+                  className="group block h-full text-center p-6 rounded-xl transition-all duration-300 bg-[rgba(251,237,219,0.5)] hover:bg-[rgba(251,237,219,0.8)] hover:shadow-[0_8px_25px_rgba(74,107,42,0.12)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#4a6b2a]"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full shadow-md mb-4" style={{ backgroundColor: '#fbeddb', boxShadow: '0 4px 20px rgba(74, 107, 42, 0.08)' }}>
+                    {principle.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 font-crimson" style={{ color: '#4a6b2a' }}>
+                    {principle.title}
+                  </h3>
+                  <p className="leading-relaxed" style={{ color: '#7a9152' }}>
+                    {principle.description}
+                  </p>
+                  <span className="inline-flex items-center gap-1 mt-4 font-medium" style={{ color: '#9c6a42' }}>
+                    Learn more
+                    <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                  </span>
+                </Link>
               </motion.div>
             ))}
           </div>
