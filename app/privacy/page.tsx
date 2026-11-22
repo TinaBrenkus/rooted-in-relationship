@@ -57,6 +57,17 @@ export default function PrivacyPage() {
               <li>Detailed case notes on our website</li>
             </ul>
           </section>
+
+          <section className="mt-10">
+            <h2 className="text-2xl font-bold mb-4 font-crimson" style={heading}>Questions?</h2>
+            <p className="text-lg leading-relaxed" style={body}>
+              If you have any questions about this privacy policy or the information you&apos;ve shared, please email{' '}
+              <a href="mailto:rootedinrelationship@outlook.com" className="underline underline-offset-2 hover:opacity-70" style={heading}>
+                rootedinrelationship@outlook.com
+              </a>
+              .
+            </p>
+          </section>
         </div>
       </main>
     </div>
